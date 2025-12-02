@@ -20,9 +20,7 @@ public class Vpop extends nhac {
     }
 
 
-    /**
-     * Ghi đè (Override) phương thức toString() để hiển thị thông tin
-     */
+    // Ghi đè (Override) phương thức nhapthongtin()
     @Override
     public void nhapthongtin() {
         super.nhapthongtin();

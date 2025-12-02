@@ -233,7 +233,7 @@ public class QuanLyNhac implements IReadWrite, IManager<nhac> {
 
     public void themBaiVaoPlaylist(String maBai, String tenPlaylist){
         Playlist pl = timPlaylist(tenPlaylist);
-        nhac bai = timKiem(maBai); // Tìm bài hát bằng hàm timKiem của IManager
+        nhac bai = timKiem(maBai);
 
         if(pl != null && bai != null){
             pl.themBaiVaoPlaylist(bai);

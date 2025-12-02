@@ -44,7 +44,7 @@ public class Main {
                     ql.them(new Usuk("U02", "Blinding Lights", "The Weeknd", 200, 2019, 800000000, "Canada"));
                     ql.them(new Usuk("U03", "Someone Like You", "Adele", 285, 2011, 220000000, "UK"));
                     ql.them(new Usuk("U04", "Shape of You", "Ed Sheeran", 240, 2017, 8000000, "UK"));
-                    System.out.println("Da them.");
+                    System.out.println("\n=========================DA THEM============================.");
                     break;
                     
                     /* 
@@ -122,12 +122,11 @@ public class Main {
                     System.out.println("\n--- XOA NHAC ---");
                     System.out.print("Nhap ma bai hat can xoa: ");
                     String maxoa = sc.nextLine();
-                    // Gọi hàm xoa từ Interface IManager (đã được QuanLyNhac hiện thực hóa)
                     boolean kqXoa = ql.xoa(maxoa); 
                     if(kqXoa) 
                     {
                         System.out.println("Da xoa thanh cong bai hat ma: " + maxoa);
-                        // Hiển thị lại danh sách sau khi xóa để user kiểm tra
+                        // Hiển thị lại danh sách sau khi xóa
                         ql.hienThiDanhSach();
                     } 
                     else 
@@ -141,7 +140,26 @@ public class Main {
                     System.out.print("Nhap ten playlist muon tao: ");
                     String tenPl = sc.nextLine();
                     ql.taoPlaylist(tenPl);
-                    
+                    String next;
+                    do {
+                        System.out.println("\n-----------------------------");
+                        System.out.print("Nhap MA BAI HAT muon them: ");
+                        String maPl = sc.nextLine();
+                        
+                        // Nếu mã không rỗng thì mới thêm
+                        if(!maPl.trim().isEmpty()) {
+                            ql.themBaiVaoPlaylist(maPl, tenPl);
+                        }
+                        
+                        // Hiển thị playlist hiện tại để dễ theo dõi
+                        ql.hienThiNoiDungPlaylist(tenPl);
+                        
+                        // 3. Hỏi người dùng có muốn thêm tiếp không
+                        System.out.print("\nBan co muon them bai KHAC vao playlist nay khong? (Y/N): ");
+                        next = sc.nextLine();
+
+                    } while (next.equalsIgnoreCase("Y"));
+                     /* 
                     System.out.println("Them bai hat vao playlist [" + tenPl + "]?");
                     System.out.print("Nhap ma bai hat muon them (hoac an Enter de bo qua): ");
                     String maPl = sc.nextLine();
@@ -150,7 +168,7 @@ public class Main {
                         ql.themBaiVaoPlaylist(maPl, tenPl);
                     }
                     // Hiển thị playlist vừa tạo
-                    ql.hienThiNoiDungPlaylist(tenPl);
+                    ql.hienThiNoiDungPlaylist(tenPl);*/
                     break;
 
                 case 6:
@@ -174,7 +192,7 @@ public class Main {
                         break;
 
                 case 7:
-                    System.out.println("Nhap ma bai hat can cap nhat: ");
+                    System.out.println("\nNhap ma bai hat can cap nhat: ");
                     String maupdate;
                     maupdate = sc.nextLine();
                     nhac baiupdate = ql.timKiem(maupdate);
@@ -184,7 +202,8 @@ public class Main {
                         System.out.println("\nNhap luot xem moi: ");
                         int view = Integer.parseInt(sc.nextLine());
                         ql.capnhatluotxem(maupdate, view);
-                        System.out.println("Bai hat sau cap nhat: ");
+                        System.out.println("=============================");
+                        System.out.println("\nBai hat sau cap nhat: ");
                         baiupdate.hienthithongtin();    
                     }
                     else
@@ -192,7 +211,7 @@ public class Main {
                     break;
 
                 case 0:
-                    System.out.println("Dang luu du lieu vao file...");
+                    System.out.println("\nDang luu du lieu vao file...");
                     // 2. TỰ ĐỘNG GHI FILE KHI THOÁT
                     ql.WriteData();
                     System.out.println("Da luu thanh cong. Hen gap lai!");

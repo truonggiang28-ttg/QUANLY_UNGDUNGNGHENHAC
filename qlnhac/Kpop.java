@@ -19,9 +19,7 @@ public class Kpop extends nhac {
         this.tenNhom = tenNhom;
     }
 
-    /**
-     * Ghi đè (Override) phương thức toString()
-     */
+    // Ghi đè (Override) phương thức nhapthongtin()
     @Override
     public void nhapthongtin() {
         super.nhapthongtin();
