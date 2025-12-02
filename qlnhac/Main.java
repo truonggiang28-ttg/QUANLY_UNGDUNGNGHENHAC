@@ -145,16 +145,12 @@ public class Main {
                         System.out.println("\n-----------------------------");
                         System.out.print("Nhap MA BAI HAT muon them: ");
                         String maPl = sc.nextLine();
-                        
-                        // Nếu mã không rỗng thì mới thêm
+                        //kiem tra ma co ton tai khong
                         if(!maPl.trim().isEmpty()) {
                             ql.themBaiVaoPlaylist(maPl, tenPl);
-                        }
-                        
-                        // Hiển thị playlist hiện tại để dễ theo dõi
+
                         ql.hienThiNoiDungPlaylist(tenPl);
                         
-                        // 3. Hỏi người dùng có muốn thêm tiếp không
                         System.out.print("\nBan co muon them bai KHAC vao playlist nay khong? (Y/N): ");
                         next = sc.nextLine();
 
