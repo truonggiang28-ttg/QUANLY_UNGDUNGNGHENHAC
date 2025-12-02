@@ -19,13 +19,7 @@ public class Usuk extends nhac {
         this.quocGia = quocGia;
     }
 
-<<<<<<< HEAD
     // Ghi đè (Override) phương thức nhapthongtin()
-=======
-    /**
-     * Ghi đè (Override) phương thức nhapthongtin()
-     */
->>>>>>> 94234a601b62b3709ca63b1e5336d4e544e688b6
     @Override
     public void nhapthongtin() {
         super.nhapthongtin();
