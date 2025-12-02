@@ -20,7 +20,7 @@ public class Usuk extends nhac {
     }
 
     /**
-     * Ghi đè (Override) phương thức toString()
+     * Ghi đè (Override) phương thức nhapthongtin()
      */
     @Override
     public void nhapthongtin() {
