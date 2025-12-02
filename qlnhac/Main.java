@@ -145,10 +145,12 @@ public class Main {
                         System.out.println("\n-----------------------------");
                         System.out.print("Nhap MA BAI HAT muon them: ");
                         String maPl = sc.nextLine();
-                        //kiem tra ma co ton tai khong
+                        
+                        // kiem tra ma bai hat
                         if(!maPl.trim().isEmpty()) {
                             ql.themBaiVaoPlaylist(maPl, tenPl);
-
+                        }
+                        
                         ql.hienThiNoiDungPlaylist(tenPl);
                         
                         System.out.print("\nBan co muon them bai KHAC vao playlist nay khong? (Y/N): ");
