@@ -71,6 +71,10 @@ public abstract class nhac implements IKhuVuc {
     }
 
     Scanner sc = new Scanner(System.in);
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 94234a601b62b3709ca63b1e5336d4e544e688b6
     public void nhapthongtin()
     {
         System.out.print("Nhap ma bai hat: ");
