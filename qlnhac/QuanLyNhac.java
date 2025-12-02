@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+// Implements cả IReadWrite (Ghi/Đọc file) và IManager (Quản lý thêm/sửa/xóa)
 public class QuanLyNhac implements IReadWrite, IManager<nhac> {
     
     private List<nhac> danhSachBaiHat;
