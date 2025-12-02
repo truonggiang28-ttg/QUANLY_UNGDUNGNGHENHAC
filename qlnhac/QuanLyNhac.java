@@ -11,7 +11,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-// Implements cả IReadWrite (Ghi/Đọc file) và IManager (Quản lý thêm/sửa/xóa)
 public class QuanLyNhac implements IReadWrite, IManager<nhac> {
     
     private List<nhac> danhSachBaiHat;
@@ -233,7 +232,7 @@ public class QuanLyNhac implements IReadWrite, IManager<nhac> {
 
     public void themBaiVaoPlaylist(String maBai, String tenPlaylist){
         Playlist pl = timPlaylist(tenPlaylist);
-        nhac bai = timKiem(maBai); // Tìm bài hát bằng hàm timKiem của IManager
+        nhac bai = timKiem(maBai); // Tìm bài hát bằng hàm timKiem 
 
         if(pl != null && bai != null){
             pl.themBaiVaoPlaylist(bai);
