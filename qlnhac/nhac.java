@@ -71,10 +71,7 @@ public abstract class nhac implements IKhuVuc {
     }
 
     Scanner sc = new Scanner(System.in);
-    /**
-     * Hàm toString() cơ sở, các lớp con sẽ ghi đè (override)
-     * để cung cấp thông tin thể loại.
-     */
+  
     public void nhapthongtin()
     {
         System.out.print("Nhap ma bai hat: ");
